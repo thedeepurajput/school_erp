@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:school_erp/auth/teacher_auth.dart';
 import 'package:school_erp/pages/home_page.dart';
+import 'package:school_erp/pages/navigation.dart';
 
 class StudentAuth extends StatefulWidget {
   StudentAuth({super.key});
@@ -40,6 +41,8 @@ class _StudentAuthState extends State<StudentAuth> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Text("Student Login", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                    SizedBox(height: 32,),
                     TextField(
                       controller: userName,
                       decoration: InputDecoration(
@@ -56,15 +59,17 @@ class _StudentAuthState extends State<StudentAuth> {
                       obscureText: obsecuredPassword,
                       decoration: InputDecoration(labelText: 'Password',
                           hintText: 'Enter Your Password',
-                          suffixIcon: IconButton(onPressed: (){
-                            setState(() {
-                              obsecuredPassword = !obsecuredPassword;
-                            });
-                          }, icon: Icon(
+                          suffixIcon: IconButton( icon: Icon(
                           obsecuredPassword
-                          ? Icons.visibility_off
-                          : Icons.visibility
-                          )),
+                          ? Icons.visibility
+                          : Icons.visibility_off
+                          ),
+                            onPressed: (){
+                              setState(() {
+                                obsecuredPassword = !obsecuredPassword;
+                              });
+                            },
+                          ),
                           border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(7),
                     )
@@ -75,7 +80,7 @@ class _StudentAuthState extends State<StudentAuth> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePage()));
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Navigation()));
                         }, style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black12,
                             foregroundColor: Colors.white,

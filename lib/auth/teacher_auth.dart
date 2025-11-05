@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:school_erp/auth/student_auth.dart';
+import 'package:school_erp/pages/home_page.dart';
+import 'package:school_erp/pages/navigation.dart';
 
 class TeacherAuth extends StatefulWidget {
   TeacherAuth({super.key});
@@ -85,7 +87,7 @@ class _TeacherAuthState extends State<TeacherAuth> {
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () {
-                              // Handle login logic
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Navigation()));
                             }, style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black12,
                               foregroundColor: Colors.white,

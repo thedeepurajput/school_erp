@@ -6,15 +6,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Page')),
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+          title: const Text('ERP', style: TextStyle(),),
+      ),
+      drawer: Drawer(),
       body: SingleChildScrollView(
-        child: Center(
-          child: Column(
+        child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Welcome to Home Page")],
+            children: [
+              Text("Welcome Deepu", style: TextStyle(fontSize: 24),)
+            ],
           ),
         ),
-      ),
     );
   }
 }
