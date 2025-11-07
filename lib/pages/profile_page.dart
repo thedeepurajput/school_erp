@@ -45,23 +45,23 @@ class ProfilePage extends StatelessWidget {
               const SizedBox(height: 20),
 
               // Buttons
-              Row(
-                children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> TeacherAuth()));
-                      }, style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6)
-
-                        )
-                    ),
-                      child: Text('Logout'),
-                    ),
-                ],
-              )
+                     Row(
+                       children: [
+                         Expanded(
+                           child: ElevatedButton(
+                            onPressed: () {
+                            }, style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12)
+                              )
+                                               ),
+                            child: Text('Logout'),
+                                               ),
+                         ),
+                       ],
+                     ),
             ],
           ),
         ),

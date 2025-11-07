@@ -34,11 +34,10 @@ class _NavigationState extends State<Navigation> {
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-          selectedItemColor: Colors.amberAccent,
           unselectedItemColor: Colors.black,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+            BottomNavigationBarItem(icon: Icon(Icons.home), activeIcon: Icon(Icons.home_outlined), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), activeIcon: Icon(Icons.person_outlined), label: 'Profile'),
           ],
         ),
       ),
