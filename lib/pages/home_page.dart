@@ -11,24 +11,37 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<dynamic> students = [];
-  List<dynamic> teachers = [];
 
-  @override
-  void initState() {
-    super.initState();
-    loadUserData();
-  }
+  final List<Map<String, dynamic>> menuItems = [
+    {'icon': Icons.book, 'label': 'Courses'},
+    {'icon': Icons.event_available, 'label': 'Attendance'},
+    {'icon': Icons.class_, 'label': 'Teacher'},
+    {'icon': Icons.person, 'label': 'Teacher'},
+    {'icon': Icons.people, 'label': 'Student'},
+    {'icon': Icons.currency_rupee, 'label': 'Fees'},
+    {'icon': Icons.notifications, 'label': 'Notice'},
+    {'icon': Icons.schedule, 'label': 'Time Table'},
+    {'icon': Icons.bar_chart, 'label': 'Report'}
+  ];
 
-  Future<void> loadUserData() async {
-    final jsonData = await rootBundle.loadString('assets/data/users.json');
-    final data = json.decode(jsonData);
-
-    setState(() {
-      students = data['students'];
-      teachers = data['teachers'];
-    });
-  }
+  // List<dynamic> students = [];
+  // List<dynamic> teachers = [];
+  //
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   loadUserData();
+  // }
+  //
+  // Future<void> loadUserData() async {
+  //   final jsonData = await rootBundle.loadString('assets/data/users.json');
+  //   final data = json.decode(jsonData);
+  //
+  //   setState(() {
+  //     students = data['students'];
+  //     teachers = data['teachers'];
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +50,50 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blueGrey,
         title: const Text('ERP Dashboard'),
       ), drawer: Menu(),
-      body: SingleChildScrollView(
-        child: Padding(
+      body:
+      // SingleChildScrollView(
+      //   child:
+        Padding(
           padding: const EdgeInsets.all(19),
-          child: Text("Welcome user", style: TextStyle(fontSize: 24),),
+          child:
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("Welcome Deepu", style: TextStyle(fontSize: 32,),),
+              SizedBox(height: 24,),
+              Expanded(
+                  child: GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 15,
+                      mainAxisSpacing: 15
+                      ),
+                      itemCount: menuItems.length,
+                      itemBuilder: (context, Index){
+                        return GestureDetector(
+                          onTap: (){},
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.blueGrey.shade100,
+                              borderRadius: BorderRadius.circular(12)
+                            ),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(menuItems[Index]['icon'], size: 32, color: Colors.blueGrey.shade800,),
+                                  Text(
+                                      menuItems[Index]['label']
+                                  )
+                                ],
+                              ),
+                            ),
+                        );
+                      }
+                  )
+              )
+            ],
+          ),
         )
-      ),
     );
   }
 }

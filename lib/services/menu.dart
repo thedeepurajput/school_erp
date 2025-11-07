@@ -12,8 +12,8 @@ class Menu extends StatelessWidget {
        padding: EdgeInsets.zero,
         children: [
             DrawerHeader(
-                decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/image/logo.jpg'), fit: BoxFit.cover)),
-                child: Center(
+               decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/image/logo.jpg'), fit: BoxFit.cover)),
+               child: Center(
                   child: Text(
                       "E.R.P", style: TextStyle(
                       color: Colors.white, fontSize: 32)
@@ -21,20 +21,31 @@ class Menu extends StatelessWidget {
                 ),
             ),
                ListTile(
-               leading: Icon(Icons.home),
-               title: Text("Home"),
+               leading: Icon(Icons.home, size: 32,),
+               title: Text("Home", style: TextStyle(fontSize: 24),),
                onTap: (){
-
                },
           ),
           ListTile(
-            leading: Icon(Icons.calendar_month),
-            title: Text("Class Schedule"),
+            leading: Text("👩‍🏫", style: TextStyle(fontSize: 24),),
+            title: Text("Class Teacher", style: TextStyle(fontSize: 24),),
+            onTap: (){
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.class_rounded, size: 32,),
+            title: Text("Time Table", style: TextStyle(fontSize: 24),),
             onTap: (){},
           ),
           ListTile(
-            leading: Text("👩‍🏫", style: TextStyle(fontSize: 20),),
-            title: Text("Class Teacher"),
+            leading: Icon(Icons.description, size: 32,),
+            title: Text("Exams", style: TextStyle(fontSize: 24),),
+            onTap: (){
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.currency_rupee_outlined, size: 28),
+            title: Text("Fees", style: TextStyle(fontSize: 24),),
             onTap: (){
             },
           ),
