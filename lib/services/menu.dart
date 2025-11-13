@@ -14,7 +14,7 @@ class Menu extends StatelessWidget {
                child: Center(
                   child: Center(
                     child: Text(
-                        "KVS\n"
+                                    "KVS\n"
                         "(Kendriya Vidyalaya Sangathan)", style: TextStyle(
                         color: Colors.white,)
                     ),
@@ -28,7 +28,7 @@ class Menu extends StatelessWidget {
                },
           ),
           ListTile(
-            leading: Text("👩‍🏫", style: TextStyle(fontSize: 24),),
+            leading: Icon(Icons.person, size: 32,),
             title: Text("Class Teacher", style: TextStyle(fontSize: 24),),
             onTap: (){
             },
