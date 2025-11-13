@@ -36,8 +36,8 @@ class _NavigationState extends State<Navigation> {
           onTap: _onItemTapped,
           unselectedItemColor: Colors.black,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), activeIcon: Icon(Icons.home_outlined), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), activeIcon: Icon(Icons.person_outlined), label: 'Profile'),
+            BottomNavigationBarItem(icon: Icon(Icons.home_outlined), activeIcon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person_outlined), activeIcon: Icon(Icons.person), label: 'Profile'),
           ],
         ),
       ),

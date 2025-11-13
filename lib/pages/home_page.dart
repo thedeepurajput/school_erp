@@ -13,15 +13,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   final List<Map<String, dynamic>> menuItems = [
-    {'icon': Icons.book, 'label': 'Courses'},
-    {'icon': Icons.event_available, 'label': 'Attendance'},
-    {'icon': Icons.class_, 'label': 'Teacher'},
-    {'icon': Icons.person, 'label': 'Teacher'},
-    {'icon': Icons.people, 'label': 'Student'},
-    {'icon': Icons.currency_rupee, 'label': 'Fees'},
-    {'icon': Icons.notifications, 'label': 'Notice'},
-    {'icon': Icons.schedule, 'label': 'Time Table'},
-    {'icon': Icons.bar_chart, 'label': 'Report'}
+      {'icon': Icons.event_available, 'label': 'Attendance'},
+      {'icon': Icons.class_, 'label': 'Class'},
+      {'icon': Icons.book, 'label': 'Courses'},
+      {'icon': Icons.currency_rupee, 'label': 'Fees'},
+      {'icon': Icons.notifications, 'label': 'Notice'},
+      // {'icon': Icons.bar_chart, 'label': 'Report'},
+      {'icon': Icons.people, 'label': 'Student'},
+      {'icon': Icons.person, 'label': 'Teacher'},
+      {'icon': Icons.schedule, 'label': 'Time Table'},
+
   ];
 
   // List<dynamic> students = [];
@@ -51,8 +52,6 @@ class _HomePageState extends State<HomePage> {
         title: const Text('ERP Dashboard'),
       ), drawer: Menu(),
       body:
-      // SingleChildScrollView(
-      //   child:
         Padding(
           padding: const EdgeInsets.all(19),
           child:
@@ -81,6 +80,7 @@ class _HomePageState extends State<HomePage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(menuItems[Index]['icon'], size: 32, color: Colors.blueGrey.shade800,),
+                                  SizedBox(height: 1,),
                                   Text(
                                       menuItems[Index]['label']
                                   )

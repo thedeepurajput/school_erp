@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:school_erp/pages/navigation.dart';
-import 'package:school_erp/pages/profile_page.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key, });
@@ -12,11 +10,14 @@ class Menu extends StatelessWidget {
        padding: EdgeInsets.zero,
         children: [
             DrawerHeader(
-               decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/image/logo.jpg'), fit: BoxFit.cover)),
+               decoration: BoxDecoration(color: Colors.blue.shade800),
                child: Center(
-                  child: Text(
-                      "E.R.P", style: TextStyle(
-                      color: Colors.white, fontSize: 32)
+                  child: Center(
+                    child: Text(
+                        "KVS\n"
+                        "(Kendriya Vidyalaya Sangathan)", style: TextStyle(
+                        color: Colors.white,)
+                    ),
                   ),
                 ),
             ),
