@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:school_erp/auth/student_auth.dart';
-import 'package:school_erp/pages/home_page.dart';
-import 'package:school_erp/pages/navigation.dart';
 
 void main() {
   runApp(const MyApp());

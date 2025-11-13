@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:school_erp/auth/student_auth.dart';
-import 'package:school_erp/pages/navigation.dart';
+
+import '../teacher/teacher_navigation.dart';
 
 class TeacherAuth extends StatefulWidget {
   const TeacherAuth({super.key});
@@ -33,7 +34,7 @@ class _TeacherAuthState extends State<TeacherAuth> {
         setState(() => isLoading = false);
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => Navigation()),
+          MaterialPageRoute(builder: (context) => TeacherNavigation()),
         );
       }
     }

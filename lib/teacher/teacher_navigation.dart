@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:school_erp/pages/home_page.dart';
-import 'package:school_erp/pages/profile_page.dart';
+import 'package:school_erp/teacher/profile_page.dart';
+import 'home_page.dart';
 
-class Navigation extends StatefulWidget {
-  const Navigation({Key? key}) : super(key: key);
+
+class TeacherNavigation extends StatefulWidget {
+  const TeacherNavigation({Key? key}) : super(key: key);
 
   @override
-  State<Navigation> createState() => _NavigationState();
+  State<TeacherNavigation> createState() => _TeacherNavigationState();
 }
 
-class _NavigationState extends State<Navigation> {
+class _TeacherNavigationState extends State<TeacherNavigation> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [HomePage(), ProfilePage()];

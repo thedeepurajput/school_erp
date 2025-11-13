@@ -18,31 +18,13 @@ class _HomePageState extends State<HomePage> {
       {'icon': Icons.book, 'label': 'Courses'},
       {'icon': Icons.currency_rupee, 'label': 'Fees'},
       {'icon': Icons.notifications, 'label': 'Notice'},
-      // {'icon': Icons.bar_chart, 'label': 'Report'},
+      {'icon': Icons.bar_chart, 'label': 'Report'},
       {'icon': Icons.people, 'label': 'Student'},
       {'icon': Icons.person, 'label': 'Teacher'},
       {'icon': Icons.schedule, 'label': 'Time Table'},
 
   ];
 
-  // List<dynamic> students = [];
-  // List<dynamic> teachers = [];
-  //
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   loadUserData();
-  // }
-  //
-  // Future<void> loadUserData() async {
-  //   final jsonData = await rootBundle.loadString('assets/data/users.json');
-  //   final data = json.decode(jsonData);
-  //
-  //   setState(() {
-  //     students = data['students'];
-  //     teachers = data['teachers'];
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {

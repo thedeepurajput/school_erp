@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:school_erp/auth/teacher_auth.dart';
-import 'package:school_erp/pages/navigation.dart';
+
+import '../student/student_navigation.dart';
+
 
 class StudentAuth extends StatefulWidget {
   const StudentAuth({super.key});
